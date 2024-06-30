@@ -8,7 +8,9 @@
     let error_box = document.querySelector(".error_box");
     let temperature_result = document.querySelector(".temperature");
     button.addEventListener("click", (e) => {
-      apiCall(text.value);
+        button.style.scale = '.92';
+        apiCall(text.value);
+        setTimeout(()=>{button.style.scale = '1'},100)
     });
 
     async function apiCall(city = "") {
@@ -23,10 +25,12 @@
       if (result.cod == 200) {
         error_box.style.display = "none";
         city_result.innerHTML = result.name;
-        temperature_result.innerHTML = `${Math.round(result.main.temp)} °C`;
+        temperature_result.innerHTML = `${Math.round(result.main.temp)}°C`;
         humidity.innerHTML = `${result.main.humidity} %`;
         wind.innerHTML = `${result.wind.speed} km\h`;
-
+        temperature_result.nextElementSibling.innerHTML = `Feels like ${Math.round(result.main.feels_like)}°C`;
+        city_result.nextElementSibling.firstElementChild.innerHTML = `Low - ${Math.round(result.main.temp_min)}°C`;
+        city_result.nextElementSibling.lastElementChild.innerHTML = `High - ${Math.round(result.main.temp_max)}°C`;
         if (result.weather[0].main == "Clouds") {
           weatherImg.src = "./images/clouds.png";
         } else if (result.weather[0].main == "Rain") {

@@ -32,6 +32,9 @@
       padding: 6px 10px;
       border: 0px;
     }
+    input::placeholder{
+        font-size: 15px;
+    }
     button{
         border-width: 0px;
         background-color: transparent;
@@ -39,6 +42,7 @@
         width: 45px;
         height: 35px;
         cursor: pointer;
+        box-shadow: 0px 1px 3px rgb(32, 178, 251);
         /* border: 1px solid green; */
     }
     button > img {
@@ -47,7 +51,7 @@
         width: 20px;
     }
     .result_box {
-        display: none;
+        display: block;
       margin: 10px 0px 0px 0px;
     }
     .imgBox {
@@ -68,9 +72,16 @@
       /* border: 2px solid red; */
       justify-content: space-between;
       align-items: end;
-      height: 100px;
+      /* height: 60px; */
     }
     .error_box{
         margin: 5px;
         display: none;
+    }
+    .lowhigh{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-bottom: 10px;
     }
