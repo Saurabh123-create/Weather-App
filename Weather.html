@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Weather.css"/>
+  </head>
+  
+  <body>
+    <div class="heading">Check Your Weather.</div>
+    <div class="card">
+      <div class="search_box">
+        <input type="text" id="search" placeholder="Enter your city name." />
+        <button><img src="./images/search.png" /></button>
+      </div>
+      <div class="error_box">
+      </div>
+      <div class="result_box">
+        <div class="imgBox">
+          <img src="./images/clear.png" width="100px" />
+        </div>
+        <div class="temperature">22°C</div>
+        <div class="city">Roorkee</div>
+        <div class="data">
+          <div>
+            <div style="display: inline-block;margin-right: 5px;">
+              <img
+                src="./images/humidity.png"
+                style="width: 50px"
+              />
+            </div>
+            <div style="display: inline-block; text-align: left;">
+              <div class="humidity" style="font-size: 20px">64%</div>
+              <span style="font-size: 14px;">Humidity</span>
+            </div>
+          </div>
+          <div>
+            <div style="display: inline-block;margin-right: 5px;">
+              <img
+                src="./images/wind.png"
+                style="width: 50px"
+              />
+            </div>
+            <div style="display: inline-block;text-align: left;">
+              <div class="wind" style="font-size: 20px">64 km/h</div>
+              <span style="font-size: 14px;">Wind Speed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./Weather.js"></script>
+</html>
